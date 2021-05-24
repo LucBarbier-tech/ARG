@@ -1,0 +1,17 @@
+{
+  "name": "ARG",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:LucBarbier-tech/ARG.git",
+  "author": "Luc Barbier <luc@neteck-fr.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.34.0"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "dependencies": {}
+}

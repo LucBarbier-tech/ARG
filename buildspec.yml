@@ -1,0 +1,19 @@
+version: 0.2
+
+env:
+  variables:
+    NODE_ENV: CODEBUILD
+
+
+phases:
+  install:
+    commands:
+      - yarn
+  build:
+    commands:
+      - yarn build
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: ./dist
