@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"/Users/luc/Documents/Arg/src/fonts/Hacked-KerX.ttf":[["Hacked-KerX.972a7469.ttf","fonts/Hacked-KerX.ttf"],"fonts/Hacked-KerX.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/Users/luc/Documents/Arg/src/fonts/Hacked-KerX.ttf":[["Hacked-KerX.972a7469.ttf","fonts/Hacked-KerX.ttf"],"fonts/Hacked-KerX.ttf"],"/Users/luc/Documents/Arg/src/fonts/murder.ttf":[["murder.6a160fbc.ttf","fonts/murder.ttf"],"fonts/murder.ttf"],"./assets/Urbex-5.jpeg":[["Urbex-5.8ada9a3e.jpeg","assets/Urbex-5.jpeg"],"assets/Urbex-5.jpeg"],"./assets/e0h4ecd81330e6e19hr70m34uj-f403cf28d3f3d00b0763daf54623fba6.png":[["e0h4ecd81330e6e19hr70m34uj-f403cf28d3f3d00b0763daf54623fba6.31a3656f.png","assets/e0h4ecd81330e6e19hr70m34uj-f403cf28d3f3d00b0763daf54623fba6.png"],"assets/e0h4ecd81330e6e19hr70m34uj-f403cf28d3f3d00b0763daf54623fba6.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65069" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51600" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
