@@ -119,21 +119,71 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 var card = document.querySelector(".card");
-card.addEventListener("click", function () {
-  card.classList.toggle("is-flipped");
-});
-var form = document.querySelector(".formContainer");
-form.addEventListener("click", function () {
-  card.classList.toggle("is-flipped");
-});
 
-window.sendCode = function sendCode() {
+if (card) {
+  card.addEventListener("click", function () {
+    card.classList.toggle("is-flipped");
+  });
+}
+
+var form = document.querySelector(".formContainer");
+
+if (form) {
+  form.addEventListener("click", function () {
+    card.classList.toggle("is-flipped");
+  });
+}
+
+window.sendCodeMirror = function sendCodeMirror() {
   var input = document.getElementById("puzzle_input");
+
+  if (!input) {
+    return;
+  }
+
   var code = input.value;
 
   if (code === "5555") {
-    console.log("BRAVO");
+    window.location.href = "./codes.html";
   }
+};
+
+window.sendCodeMedia = function sendCodeMedia() {
+  var input = document.getElementById("media_input");
+
+  if (!input) {
+    return;
+  }
+
+  var code = input.value;
+
+  if (code === "5555") {
+    window.location.href = "./codeis5555.html";
+  }
+};
+
+window.sendCodes = function sendCodes() {
+  var input1 = document.getElementById("codes_input_1");
+  var input2 = document.getElementById("codes_input_2");
+  var input3 = document.getElementById("codes_input_3");
+
+  if (!input1 || !input2 || !input3) {
+    return;
+  }
+
+  if (input1.value.toUpperCase() !== "WHATALIFE") {
+    return;
+  }
+
+  if (input2.value.toUpperCase() !== "BUBZ") {
+    return;
+  }
+
+  if (input3.value.toUpperCase() !== "MARTEAU") {
+    return;
+  }
+
+  window.location.href = "./end.html";
 };
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -163,7 +213,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51600" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52992" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "Murder";
-  src: url("/murder.6a160fbc.ttf");
+  src: url("/Nightmare.12e14b47.ttf");
 }
 /*--------------------------*/
 /*          Colors          */
@@ -98,6 +98,83 @@ select:focus {
 }
 
 /*--------------------------*/
+/*        CodesPage         */
+/*--------------------------*/
+.codes_input_1 {
+  font-family: "Murder";
+  background-color: blue;
+  font-size: large;
+  color: white;
+}
+
+.codes_input_2 {
+  font-family: "Murder";
+  background-color: red;
+  font-size: large;
+  color: white;
+}
+
+.codes_input_3 {
+  font-family: "Murder";
+  background-color: green;
+  font-size: large;
+  color: white;
+}
+
+/*--------------------------*/
+/*        FirstMedia        */
+/*--------------------------*/
+.media_background {
+  background-image: url("/media.d8ebaf9f.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.media_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2vh;
+}
+
+.media_input {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  border-color: #5162af;
+  width: 150px;
+  height: 20px;
+  color: #7935e6;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Murder", Times, serif;
+  margin-bottom: 10px;
+}
+
+.media_button {
+  font-size: 16px;
+  font-family: "Glitch", Times, serif;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.63);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  border-color: #6d208b;
+}
+.media_button:hover {
+  background-color: #6d208b;
+  transition: all 0.5s ease-in-out;
+}
+
+/*--------------------------*/
 /*       FirstPuzzle        */
 /*--------------------------*/
 .main_background {
@@ -153,10 +230,10 @@ select:focus {
   z-index: 0;
   border-radius: 20px;
   font-family: "Murder";
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   line-height: 1px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .glow-on-hover:before {
