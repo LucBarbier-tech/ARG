@@ -803,9 +803,9 @@ var pJS = function pJS(tag_id, params) {
         break;
 
       case 'image':
-        function draw() {
+        var draw = function draw() {
           pJS.canvas.ctx.drawImage(img_obj, p.x - radius, p.y - radius, radius * 2, radius * 2 / p.img.ratio);
-        }
+        };
 
         if (pJS.tmp.img_type == 'svg') {
           var img_obj = p.img.obj;
@@ -1090,17 +1090,17 @@ var pJS = function pJS(tag_id, params) {
   pJS.fn.modes.bubbleParticle = function (p) {
     /* on hover event */
     if (pJS.interactivity.events.onhover.enable && isInArray('bubble', pJS.interactivity.events.onhover.mode)) {
+      var init = function init() {
+        p.opacity_bubble = p.opacity;
+        p.radius_bubble = p.radius;
+      };
+      /* mousemove - check ratio */
+
+
       var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
           dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
           dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse),
           ratio = 1 - dist_mouse / pJS.interactivity.modes.bubble.distance;
-
-      function init() {
-        p.opacity_bubble = p.opacity;
-        p.radius_bubble = p.radius;
-      }
-      /* mousemove - check ratio */
-
 
       if (dist_mouse <= pJS.interactivity.modes.bubble.distance) {
         if (ratio >= 0 && pJS.interactivity.status == 'mousemove') {
@@ -1154,23 +1154,7 @@ var pJS = function pJS(tag_id, params) {
     }
     /* on click event */
     else if (pJS.interactivity.events.onclick.enable && isInArray('bubble', pJS.interactivity.events.onclick.mode)) {
-        if (pJS.tmp.bubble_clicking) {
-          var dx_mouse = p.x - pJS.interactivity.mouse.click_pos_x,
-              dy_mouse = p.y - pJS.interactivity.mouse.click_pos_y,
-              dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse),
-              time_spent = (new Date().getTime() - pJS.interactivity.mouse.click_time) / 1000;
-
-          if (time_spent > pJS.interactivity.modes.bubble.duration) {
-            pJS.tmp.bubble_duration_end = true;
-          }
-
-          if (time_spent > pJS.interactivity.modes.bubble.duration * 2) {
-            pJS.tmp.bubble_clicking = false;
-            pJS.tmp.bubble_duration_end = false;
-          }
-        }
-
-        function process(bubble_param, particles_param, p_obj_bubble, p_obj, id) {
+        var process = function process(bubble_param, particles_param, p_obj_bubble, p_obj, id) {
           if (bubble_param != particles_param) {
             if (!pJS.tmp.bubble_duration_end) {
               if (dist_mouse <= pJS.interactivity.modes.bubble.distance) {
@@ -1194,6 +1178,22 @@ var pJS = function pJS(tag_id, params) {
                 if (id == 'opacity') p.opacity_bubble = value;
               }
             }
+          }
+        };
+
+        if (pJS.tmp.bubble_clicking) {
+          var dx_mouse = p.x - pJS.interactivity.mouse.click_pos_x,
+              dy_mouse = p.y - pJS.interactivity.mouse.click_pos_y,
+              dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse),
+              time_spent = (new Date().getTime() - pJS.interactivity.mouse.click_time) / 1000;
+
+          if (time_spent > pJS.interactivity.modes.bubble.duration) {
+            pJS.tmp.bubble_duration_end = true;
+          }
+
+          if (time_spent > pJS.interactivity.modes.bubble.duration * 2) {
+            pJS.tmp.bubble_clicking = false;
+            pJS.tmp.bubble_duration_end = false;
           }
         }
 
@@ -1241,13 +1241,7 @@ var pJS = function pJS(tag_id, params) {
       }
 
       if (pJS.tmp.repulse_clicking) {
-        var repulseRadius = Math.pow(pJS.interactivity.modes.repulse.distance / 6, 3);
-        var dx = pJS.interactivity.mouse.click_pos_x - p.x,
-            dy = pJS.interactivity.mouse.click_pos_y - p.y,
-            d = dx * dx + dy * dy;
-        var force = -repulseRadius / d * 1;
-
-        function process() {
+        var process = function process() {
           var f = Math.atan2(dy, dx);
           p.vx = force * Math.cos(f);
           p.vy = force * Math.sin(f);
@@ -1260,8 +1254,14 @@ var pJS = function pJS(tag_id, params) {
             if (pos.x + p.radius > pJS.canvas.w) p.vx = -p.vx;else if (pos.x - p.radius < 0) p.vx = -p.vx;
             if (pos.y + p.radius > pJS.canvas.h) p.vy = -p.vy;else if (pos.y - p.radius < 0) p.vy = -p.vy;
           }
-        } // default
+        }; // default
 
+
+        var repulseRadius = Math.pow(pJS.interactivity.modes.repulse.distance / 6, 3);
+        var dx = pJS.interactivity.mouse.click_pos_x - p.x,
+            dy = pJS.interactivity.mouse.click_pos_y - p.y,
+            d = dx * dx + dy * dy;
+        var force = -repulseRadius / d * 1;
 
         if (d <= repulseRadius) {
           process();
@@ -1754,11 +1754,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49443" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52992" + '/');
->>>>>>> parent of d3add9a... Try fix things
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60212" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

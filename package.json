@@ -1,7 +1,7 @@
 {
   "name": "ARG",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "git@github.com:LucBarbier-tech/ARG.git",
   "author": "Luc Barbier <luc@neteck-fr.com>",
   "license": "MIT",
@@ -13,7 +13,5 @@
     "start": "parcel src/index.html src/codeis5555.html src/media.html src/codes.html src/end.html",
     "build": "parcel build src/index.html src/codeis5555.html src/media.html src/codes.html src/end.html --public-url ./"
   },
-  "dependencies": {
-    "parcel": "2.0.0-nightly.389"
-  }
+  "dependencies": {}
 }

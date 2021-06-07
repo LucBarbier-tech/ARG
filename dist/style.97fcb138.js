@@ -217,11 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49443" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52992" + '/');
->>>>>>> parent of d3add9a... Try fix things
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60212" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
