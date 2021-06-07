@@ -95,6 +95,14 @@ select:focus {
   flex-direction: column;
 }
 
+.row {
+  flex-direction: row;
+}
+
+.fEnd {
+  align-self: flex-end;
+}
+
 .center {
   align-items: center;
   justify-content: center;
@@ -139,12 +147,28 @@ select:focus {
   color: white;
 }
 
+.codes_background {
+  background-image: url("./assets/sanic.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.codesContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
 /*--------------------------*/
 /*        FirstMedia        */
 /*--------------------------*/
 
 .media_background {
-  background-image: url("./assets/media.jpeg");
+  background-image: url("./assets/lab.jpg");
   background-size: cover;
   background-position: center;
 }
