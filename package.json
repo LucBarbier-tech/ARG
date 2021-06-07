@@ -1,7 +1,7 @@
 {
   "name": "ARG",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "index.js",
   "repository": "git@github.com:LucBarbier-tech/ARG.git",
   "author": "Luc Barbier <luc@neteck-fr.com>",
   "license": "MIT",
