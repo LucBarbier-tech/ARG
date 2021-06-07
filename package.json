@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html src/codeis555.html src/media.html codes.html end.html",
-    "build": "parcel build src/index.js src/index.html src/codeis555.html src/media.html codes.html end.html --public-url ./"
+    "build": "parcel build src/index.html src/codeis555.html src/media.html codes.html end.html --public-url ./"
   },
   "dependencies": {
     "parcel": "2.0.0-nightly.389"
