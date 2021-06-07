@@ -10,8 +10,10 @@
     "sass": "^1.34.0"
   },
   "scripts": {
-    "start": "parcel src/index.html src/codeis555.html src/media.html",
-    "build": "parcel build src/index.js src/index.html src/codeis555.html src/media.html --public-url ./"
+    "start": "parcel src/index.html src/codeis555.html src/media.html codes.html end.html",
+    "build": "parcel build src/index.js src/index.html src/codeis555.html src/media.html codes.html end.html --public-url ./"
   },
-  "dependencies": {}
+  "dependencies": {
+    "parcel": "2.0.0-nightly.389"
+  }
 }
