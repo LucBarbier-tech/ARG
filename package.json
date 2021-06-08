@@ -10,8 +10,8 @@
     "sass": "^1.34.0"
   },
   "scripts": {
-    "start": "parcel --no-cache src/index.html src/codeis5555.html src/media.html src/codes.html src/end.html",
-    "build": "parcel build --no-cache src/index.js src/style.scss src/index.html src/codeis5555.html src/media.html src/codes.html src/end.html --public-url ./"
+    "start": "parcel --no-cache src/index.html src/codeis5555.html src/media.html src/codes.html src/symboles.html src/end.html",
+    "build": "parcel build --no-cache src/index.js src/style.scss src/index.html src/codeis5555.html src/media.html src/codes.html src/symboles.html src/end.html --public-url ./"
   },
   "dependencies": {}
 }
