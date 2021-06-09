@@ -110,12 +110,25 @@ select:focus {
 .endText {
   font-size: 100px;
   background-color: yellowgreen;
-  padding: 20px;
 }
 
 .endTextTitle {
   font-size: 50px;
-  margin-bottom: 50px;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.endTitleContainerTop {
+  text-align: center;
+  position: absolute;
+  top: 10vh;
+}
+
+.endTitleContainerBottom {
+  text-align: center;
+  position: absolute;
+  bottom: 20vh;
 }
 
 /*--------------------------*/
