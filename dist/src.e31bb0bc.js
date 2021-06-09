@@ -173,22 +173,29 @@ window.sendCodeMirror = function sendCodeMirror() {
 
   var code = input.value;
 
-  if (code === "5555") {
+  if (code === "10061994") {
     window.location.href = "./codes.html";
   }
 };
 
 window.sendCodeMedia = function sendCodeMedia() {
-  var input = document.getElementById("media_input");
+  var answers = ["1337", "1609", "1994", "5854"];
+  var input1 = document.getElementById("media_input1");
+  var input2 = document.getElementById("media_input2");
+  var input3 = document.getElementById("media_input3");
+  var input4 = document.getElementById("media_input4");
 
-  if (!input) {
+  if (!input1 || !input2 || !input3 || !input4) {
     return;
   }
 
-  var code = input.value;
+  var inputs = [input1.value, input2.value, input3.value, input4.value];
+  var intersection = answers.filter(function (element) {
+    return inputs.includes(element);
+  });
 
-  if (code === "5555") {
-    window.location.href = "./codeis5555.html";
+  if (intersection.length === 4) {
+    window.location.href = "./codeis49916001.html";
   }
 };
 
@@ -271,7 +278,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50122" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61353" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

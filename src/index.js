@@ -47,19 +47,25 @@ window.sendCodeMirror = function sendCodeMirror() {
     return;
   }
   const code = input.value;
-  if (code === "5555") {
+  if (code === "10061994") {
     window.location.href = "./codes.html";
   }
 };
 
 window.sendCodeMedia = function sendCodeMedia() {
-  const input = document.getElementById("media_input");
-  if (!input) {
+  const answers = ["1337", "1609", "1994", "5854"];
+  const input1 = document.getElementById("media_input1");
+  const input2 = document.getElementById("media_input2");
+  const input3 = document.getElementById("media_input3");
+  const input4 = document.getElementById("media_input4");
+  if (!input1 || !input2 || !input3 || !input4) {
     return;
   }
-  const code = input.value;
-  if (code === "5555") {
-    window.location.href = "./codeis5555.html";
+  const inputs = [input1.value, input2.value, input3.value, input4.value];
+
+  const intersection = answers.filter((element) => inputs.includes(element));
+  if (intersection.length === 4) {
+    window.location.href = "./codeis49916001.html";
   }
 };
 
